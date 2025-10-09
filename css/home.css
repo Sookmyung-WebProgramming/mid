@@ -1,0 +1,139 @@
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background-color: #fff;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #666;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  padding: 40px 20px;
+  justify-content: center;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.friend-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.friend-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.friend-list li:hover {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding-left: 5px;
+}
+
+.friend-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.friend-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.friend-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.friend-status {
+  font-size: 13px;
+  color: #888;
+}
+
+.main-content {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.main-content h2 {
+  color: #333;
+}
+
+.unread-chat-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.unread-chat-list li {
+  margin-bottom: 10px;
+}
+
+.unread-chat-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 12px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.unread-chat-list a:hover {
+  background-color: #ffe2de;
+}
+
+.unread-count {
+  background-color: #ff6f61;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.schedule {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  color: #555;
+  font-size: 15px;
+}
+
+.schedule li {
+  margin-bottom: 8px;
+}
+
+/* 홈 반응형 */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 100%;
+  }
+}

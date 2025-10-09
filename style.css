@@ -1,377 +1,96 @@
-/* Reset 기본 스타일 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
+@import url("css/home.css");
+@import url("css/chat.css");
+@import url("css/checklist.css");
+@import url("css/history.css");
+@import url("css/profile.css");
 
-/* 공통 레이아웃 */
+
+/* ----------------- 공통 ----------------- */
 body {
-    background-color: #f5f5f5;
-    color: #333;
-}
-
-header {
-    background-color: #4a90e2;
-    color: white;
-    padding: 15px 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  padding-top: 80px;
 }
 
 nav {
-    background-color: #fff;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
-nav a {
-    text-decoration: none;
-    color: #333;
-    margin-right: 15px;
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
 }
 
-nav a:hover {
-    color: #4a90e2;
+.menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* 컨테이너 */
-.container {
-    display: flex;
-    padding: 20px;
-    gap: 20px;
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
 }
 
-
-
-/* 여기부터!!!! */
-
-/* 친구목록 */
-.friend-list {
-    list-style: none;
+.menu li a:hover,
+.menu li a.active {
+  color: #fff;
+  background-color: #ff6f61;
+  border-radius: 5px;
 }
 
-.friend-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-    padding: 8px;
-    border-radius: 8px;
-    transition: background-color 0.2s;
-    cursor: pointer;
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.friend-list li:hover {
-    background-color: #f0f0f0;
+.search-container input[type="text"] {
+  padding: 7px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-.friend-img {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
+.search-container button {
+  padding: 7px 14px;
+  border: none;
+  background-color: #ff6f61;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.friend-info {
-    display: flex;
+.search-container button:hover {
+  background-color: #e65b50;
+}
+
+/* 공통 반응형 */
+@media (max-width: 900px) {
+  .container {
     flex-direction: column;
-}
-
-.friend-name {
-    font-weight: bold;
-}
-
-.friend-status {
-    font-size: 0.85rem;
-    color: #666;
-}
-
-/* 읽지 않은 채팅 목록 */
-.unread-chat-list {
-    list-style: none;
-    margin-top: 15px;
-}
-
-.unread-chat-list li {
-    border-bottom: 1px solid #ddd;
-}
-
-.unread-chat-list li a {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
-    transition: background-color 0.2s;
-}
+  }
 
-.unread-chat-list li a:hover {
-    background-color: #f0f8ff;
-}
-
-.chat-name {
-    font-weight: bold;
-}
-
-.chat-preview {
-    font-size: 0.9rem;
-    color: #555;
-    margin-left: 10px;
-    flex: 1;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.unread-count {
-    background-color: #ff3b30;
-    color: white;
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 2px 6px;
-    border-radius: 50%;
-}
-
-
-/* 메인 영역 */
-.main-content {
-    flex: 1;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    min-height: 80vh;
-    overflow-y: auto;
-}
-
-/* 채팅창 */
-.chat-window {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.chat-messages {
-    flex: 1;
-    overflow-y: auto;
-    margin-bottom: 10px;
-}
-
-.chat-input {
-    display: flex;
-    gap: 10px;
-}
-
-.chat-input input {
-    flex: 1;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-.chat-input button {
-    padding: 10px 15px;
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.chat-input button:hover {
-    background-color: #357ABD;
-}
-
-/* 버튼 공통 */
-button {
-    cursor: pointer;
-}
-
-/* 테이블 / 체크리스트 */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-th {
-    background-color: #4a90e2;
-    color: white;
-}
-
-/* 사이드바 오늘 할 일 */
-.today-tasks {
-    list-style: none;
-    padding: 0;
-}
-
-.today-tasks li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.today-tasks input[type="checkbox"] {
-    margin-right: 8px;
-}
-
-/* 채팅 링크 */
-.today-tasks .chat-link {
-    position: relative;  /* 툴팁을 위한 상대 위치 */
-    margin-left: auto;   /* 오른쪽 끝에 배치 */
-    text-decoration: none;
-    font-size: 1.2em;
-    color: #007bff;
-    transition: color 0.3s;
-}
-
-.today-tasks .chat-link:hover {
-    color: #0056b3;
-}
-
-/* 툴팁 스타일 */
-.today-tasks .chat-link .tooltip-text {
-    visibility: hidden;
-    width: 130px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 4px;
-    padding: 4px 6px;
-    position: absolute;
-    top: -30px;   /* 아이콘 위로 위치 */
-    right: 0;
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 0.9em;
-    z-index: 10;
-}
-
-.today-tasks .chat-link:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-
-
-/* 달력 기본 */
-.calendar {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.calendar-header {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-}
-
-.day-name {
-    font-weight: bold;
-    text-align: center;
-    padding: 5px 0;
-    background-color: #4a90e2;
-    color: #fff;
-    border-radius: 4px;
-}
-
-.day {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #f5f5f5;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.day:hover {
-    background-color: #dbe9f7;
-}
-
-.prev-month {
-    color: #aaa;
-}
-
-.today {
-    background-color: #4a90e2;
-    color: white;
-    font-weight: bold;
-}
-
-
-
-/* 사이드바 채팅방별 필터 */
-.chatroom-list {
-    list-style: none;
-    padding: 0;
-}
-
-.chatroom-list li {
-    margin-bottom: 10px;
-}
-
-.chatroom-list a {
-    text-decoration: none;
-    color: #007bff;
-    transition: color 0.3s;
-}
-
-.chatroom-list a:hover {
-    color: #0056b3;
-}
-
-/* 보관함 메인: 사진/동영상 그리드 */
-.media-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.media-item {
-    position: relative;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    overflow: hidden;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.media-item img,
-.media-item video {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.media-info {
-    display: block;
-    padding: 4px;
-    font-size: 0.85em;
-    color: #555;
-}
-
-
-
-/* 멀티프로필 카드 */
-.profile-card {
-    background-color: #e9f0f7;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
+  nav {
+    padding: 0 20px;
+  }
 }

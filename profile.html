@@ -1,37 +1,84 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>멀티프로필</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>송이톡 - 멀티프로필 관리</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>웹채팅 서비스</header>
-    <nav>
-        <a href="index.html">홈</a>
-        <a href="chat.html">채팅</a>
-        <a href="checklist.html">체크리스트</a>
-        <a href="history.html">보관함</a>
-        <a href="profile.html">멀티프로필</a>
-    </nav>
 
-    <div class="container">
-        <div class="sidebar">
-            <button>프로필 추가</button>
+<!-- 네비게이션 -->
+<nav>
+  <div class="logo">송이톡</div>
+  <ul class="menu">
+    <li><a href="index.html">홈</a></li>
+    <li><a href="chat_list.html">채팅</a></li>
+    <li><a href="checklist.html">체크리스트</a></li>
+    <li><a href="history.html">보관함</a></li>
+    <li><a href="profile.html" class="active">멀티프로필</a></li>
+  </ul>
+  <form class="search-container">
+    <input type="text" placeholder="친구 검색">
+    <button type="submit">검색</button>
+  </form>
+</nav>
+
+<div class="container">
+
+  <!-- 왼쪽 사이드바 -->
+  <div class="sidebar">
+    <button>프로필 추가</button>
+  </div>
+
+  <!-- 오른쪽 메인 -->
+  <div class="main-content">
+    <h2>멀티프로필 관리</h2>
+
+    <!-- 프로필 카드 -->
+    <div class="profile-card">
+      <div class="profile-info">
+        <img src="https://picsum.photos/50?random=1" alt="눈송이" class="profile-img">
+        <div class="profile-text">
+          <p class="profile-name">눈송이</p>
+          <p class="profile-message">오늘 저녁 뭐 먹지?</p>
         </div>
-        <div class="main-content">
-            <h2>멀티프로필 관리</h2>
-            <div class="profile-card">
-                <p>프로필 1</p>
-                <button>수정</button>
-                <button>삭제</button>
-            </div>
-            <div class="profile-card">
-                <p>프로필 2</p>
-                <button>수정</button>
-                <button>삭제</button>
-            </div>
-        </div>
+      </div>
+      <div class="profile-buttons">
+        <button>수정</button>
+        <button>삭제</button>
+      </div>
     </div>
+
+    <div class="profile-card">
+      <div class="profile-info">
+        <img src="https://picsum.photos/50?random=2" alt="꽃송이" class="profile-img">
+        <div class="profile-text">
+          <p class="profile-name">꽃송이</p>
+          <p class="profile-message">보고서 다 작성 완료!</p>
+        </div>
+      </div>
+      <div class="profile-buttons">
+        <button>수정</button>
+        <button>삭제</button>
+      </div>
+    </div>
+
+    <div class="profile-card">
+      <div class="profile-info">
+        <img src="https://picsum.photos/50?random=3" alt="별송이" class="profile-img">
+        <div class="profile-text">
+          <p class="profile-name">별송이</p>
+          <p class="profile-message">ㅋㅋㅋㅋㅋㅋ</p>
+        </div>
+      </div>
+      <div class="profile-buttons">
+        <button>수정</button>
+        <button>삭제</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>

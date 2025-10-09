@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>송이톡 - 친구들과 소통하는 공간</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 네비게이션 -->
+<nav>
+  <div class="logo">송이톡</div>
+  <ul class="menu">
+    <li><a href="index.html">홈</a></li>
+    <li><a href="chat_list.html">채팅</a></li>
+    <li><a href="checklist.html">체크리스트</a></li>
+    <li><a href="history.html">보관함</a></li>
+    <li><a href="profile.html">멀티프로필</a></li>
+  </ul>
+  <div class="search-container">
+    <input type="text" placeholder="친구 검색">
+    <button>검색</button>
+  </div>
+</nav>
+
+  <div class="container">
+
+    <!-- 왼쪽 사이드 -->
+    <div class="sidebar">
+      <h3>채팅방 정보</h3>
+      <ul>
+        <li>📅 일정 보기</li>
+        <li>📸 추억 보기</li>
+      </ul>
+    </div>
+
+    <!-- 오른쪽 메인 영역 -->
+    <div class="main-content chat-window">
+      <div class="chat-header">
+        <h2>💬 홍길동과의 대화</h2>
+      </div>
+
+      <div class="chat-messages">
+        <div class="message friend">
+          <img src="friend1.jpg" alt="홍길동" class="chat-img">
+          <div class="bubble">안녕하세요!</div>
+        </div>
+
+        <div class="message me">
+          <div class="bubble">안녕하세요~ 반가워요 😊</div>
+        </div>
+
+        <div class="message friend">
+          <img src="friend1.jpg" alt="홍길동" class="chat-img">
+          <div class="bubble">오늘 일정 공유드릴게요!</div>
+        </div>
+      </div>
+
+      <div class="chat-input">
+        <input type="text" placeholder="메시지 입력...">
+        <button>전송</button>
+      </div>
+    </div>
+    
+  </div>
+
+</body>
+
+</html>
