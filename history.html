@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>웹채팅 서비스 - 보관함</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>웹채팅 서비스</header>
+    <nav>
+        <a href="index.html">홈</a>
+        <a href="chat.html">채팅</a>
+        <a href="checklist.html">체크리스트</a>
+        <a href="history.html">보관함</a>
+        <a href="profile.html">멀티프로필</a>
+    </nav>
+
+    <div class="container">
+        <!-- 왼쪽: 채팅방별 필터 -->
+        <div class="sidebar">
+            <h3>채팅방별 보기</h3>
+            <ul class="chatroom-list">
+                <li><a href="#all">전체</a></li>
+                <li><a href="#hong">홍길동</a></li>
+                <li><a href="#lee">이영희</a></li>
+                <li><a href="#kim">김철수</a></li>
+            </ul>
+        </div>
+
+        <!-- 오른쪽: 보관함 메인 -->
+        <div class="main-content">
+            <h2>보관함</h2>
+            <p>사진과 동영상을 확인하세요. 클릭하면 해당 채팅방으로 이동합니다.</p>
+
+            <div class="media-grid">
+                <!-- 전체 보관함 예시 -->
+                <div class="media-item">
+                    <a href="chat.html">
+                        <img src="photo1.jpg" alt="사진1">
+                        <span class="media-info">홍길동 • 2025-10-05</span>
+                    </a>
+                </div>
+                <div class="media-item">
+                    <a href="chat.html">
+                        <video src="video1.mp4" controls></video>
+                        <span class="media-info">이영희 • 2025-10-04</span>
+                    </a>
+                </div>
+                <div class="media-item">
+                    <a href="chat.html">
+                        <img src="photo2.jpg" alt="사진2">
+                        <span class="media-info">김철수 • 2025-10-03</span>
+                    </a>
+                </div>
+                <div class="media-item">
+                    <a href="chat.html">
+                        <video src="video2.mp4" controls></video>
+                        <span class="media-info">홍길동 • 2025-10-02</span>
+                    </a>
+                </div>
+                <!-- 더미 아이템 추가 가능 -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

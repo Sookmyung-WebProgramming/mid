@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>체크리스트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>웹채팅 서비스</header>
+    <nav>
+        <a href="index.html">홈</a>
+        <a href="chat.html">채팅</a>
+        <a href="checklist.html">체크리스트</a>
+        <a href="history.html">보관함</a>
+        <a href="profile.html">멀티프로필</a>
+    </nav>
+
+    <div class="container">
+        <!-- 왼쪽: 오늘 할 일 -->
+        <div class="sidebar">
+            <h3>할 일</h3>
+            <br/>
+            <ul class="today-tasks">
+                <li>
+                    <input type="checkbox" id="task1">
+                    <label for="task1">홍길동과 채팅</label>
+                    <a href="chat.html" class="chat-link">
+                        💬
+                        <span class="tooltip-text">홍길동 채팅방</span>
+                    </a>
+                </li>
+                <li>
+                    <input type="checkbox" id="task2">
+                    <label for="task2">팀플 자료 준비</label>
+                    <a href="chat.html" class="chat-link">
+                        💬
+                        <span class="tooltip-text">팀플 채팅방</span>
+                    </a>
+                </li>
+                <li>
+                    <input type="checkbox" id="task3">
+                    <label for="task3">회의 참석</label>
+                    <a href="chat.html" class="chat-link">
+                        💬
+                        <span class="tooltip-text">회의 채팅방</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 오른쪽: 달력 -->
+        <div class="main-content">
+            <div class="calendar">
+                <div class="calendar-header">
+                    <span class="month">2025년 10월</span>
+                </div>
+                <div class="calendar-grid">
+                    <div class="day-name">일</div>
+                    <div class="day-name">월</div>
+                    <div class="day-name">화</div>
+                    <div class="day-name">수</div>
+                    <div class="day-name">목</div>
+                    <div class="day-name">금</div>
+                    <div class="day-name">토</div>
+
+                    <!-- 달력 날짜 예시 -->
+                    <div class="day prev-month">28</div>
+                    <div class="day prev-month">29</div>
+                    <div class="day prev-month">30</div>
+                    <div class="day">1</div>
+                    <div class="day">2</div>
+                    <div class="day">3</div>
+                    <div class="day">4</div>
+
+                    <div class="day">5</div>
+                    <div class="day">6</div>
+                    <div class="day">7</div>
+                    <div class="day">8</div>
+                    <div class="day">9</div>
+                    <div class="day">10</div>
+                    <div class="day">11</div>
+
+                    <div class="day">12</div>
+                    <div class="day">13</div>
+                    <div class="day">14</div>
+                    <div class="day">15</div>
+                    <div class="day">16</div>
+                    <div class="day">17</div>
+                    <div class="day">18</div>
+
+                    <div class="day">19</div>
+                    <div class="day">20</div>
+                    <div class="day">21</div>
+                    <div class="day">22</div>
+                    <div class="day">23</div>
+                    <div class="day">24</div>
+                    <div class="day">25</div>
+
+                    <div class="day">26</div>
+                    <div class="day">27</div>
+                    <div class="day today">7</div> <!-- 오늘 강조 -->
+                    <div class="day">8</div>
+                    <div class="day">9</div>
+                    <div class="day">10</div>
+                    <div class="day">11</div>
+
+                    <div class="day">12</div>
+                    <div class="day">13</div>
+                    <div class="day">14</div>
+                    <div class="day">15</div>
+                    <div class="day">16</div>
+                    <div class="day">17</div>
+                    <div class="day">18</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
