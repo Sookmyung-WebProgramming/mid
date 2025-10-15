@@ -1,86 +1,73 @@
-body {
-  background-color: #f7f8fa;
-  font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-  margin: 0;
-  padding-top: 90px;
-}
-
+/* ---------------- 레이아웃 ---------------- */
 .container {
   display: flex;
-  max-width: 1200px;
-  margin: 30px auto;
-  gap: 24px;
-  padding: 0 20px;
+  gap: 20px;
+  max-width: 1500px;
+  margin: 40px auto 0 auto;
+  padding: 20px;
 }
 
-/* ---------------- 사이드바 ---------------- */
+/* ---------------- 왼쪽 사이드바 ---------------- */
 .sidebar {
-  width: 240px;
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  padding: 20px;
+  width: 250px;
   height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .sidebar h3 {
-  font-size: 16px;
-  font-weight: 600;
-  color: #444;
   margin-bottom: 10px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 6px;
+  color: #000000;
+  font-size: 20px;
 }
 
+/* 채팅방 리스트 스크롤 최적화 */
 .chatroom-list {
   list-style: none;
   padding: 0;
-  margin-bottom: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 200px; /* 높이 제한 */
+  overflow-y: auto;   /* 스크롤 가능 */
 }
 
-.chatroom-list li {
-  margin: 6px 0;
-}
-
-.chatroom-list a {
+.chatroom-list li a {
   text-decoration: none;
-  color: #555;
-  font-size: 14px;
+  color: #333;
+  padding: 6px 8px;
+  display: block;
+  border-radius: 6px;
   transition: 0.2s;
 }
 
 .chatroom-list li.active a,
-.chatroom-list a:hover {
-  color: #6a5acd;
-  font-weight: 600;
-}
-
-/* 필터 */
-.filter-box {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 16px;
+.chatroom-list li a:hover {
+  background-color: #8050F2;
+  color: #fff;
 }
 
 .filter-box label {
-  font-size: 14px;
-  color: #555;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
 }
 
 .sort-select {
   width: 100%;
-  padding: 8px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  font-size: 14px;
-  color: #333;
-  background-color: #fff;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
 }
 
 /* ---------------- 메인 콘텐츠 ---------------- */
 .main-content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .history-header {
@@ -90,59 +77,53 @@ body {
 }
 
 .history-header h2 {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
-  color: #333;
+  color: #000000;
 }
 
 .header-actions {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 
-.search-media {
+.header-actions input {
   padding: 8px 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.upload-btn {
-  background-color: #6a5acd;
-  color: #fff;
+.header-actions button {
+  background-color: #8050F2;
   border: none;
   padding: 8px 14px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
   cursor: pointer;
-  transition: 0.2s;
-}
-
-.upload-btn:hover {
-  background-color: #5848c2;
 }
 
 .subtitle {
-  font-size: 14px;
-  color: #777;
-  margin: 8px 0 20px;
+  font-size: 20px;
+  color: #555;
 }
 
 /* ---------------- 미디어 그리드 ---------------- */
 .media-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 20px;
 }
 
-/* 카드 */
 .media-item {
   background-color: #fff;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 3px 6px rgba(0,0,0,0.08);
-  transition: 0.25s ease;
   position: relative;
+  transition: 0.25s ease;
 }
 
 .media-item:hover {
@@ -150,19 +131,14 @@ body {
   box-shadow: 0 8px 14px rgba(0,0,0,0.12);
 }
 
-.media-thumb {
-  position: relative;
-}
-
 .media-thumb img,
 .media-thumb video {
   width: 100%;
   display: block;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1/1;
   object-fit: cover;
 }
 
-/* 즐겨찾기 버튼 */
 .fav-btn {
   position: absolute;
   top: 8px;
@@ -180,28 +156,26 @@ body {
 
 .fav-btn.active,
 .fav-btn:hover {
-  color: #ffcc00;
+  color: #8050F2;
 }
 
-/* 메타 정보 */
 .media-meta {
   padding: 10px 12px;
-  background-color: #fff;
 }
 
 .media-title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: #333;
   margin-bottom: 3px;
 }
 
 .media-date {
-  font-size: 12px;
+  font-size: 14px;
   color: #888;
 }
 
-/* 반응형 */
+/* ---------------- 반응형 ---------------- */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;

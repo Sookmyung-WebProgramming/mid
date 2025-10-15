@@ -1,14 +1,15 @@
-@import url("css/home.css");
-@import url("css/chat.css");
+@import url("css/index.css");
+@import url("css/chat_list.css");
+@import url("css/chat_detail.css");
 @import url("css/checklist.css");
 @import url("css/history.css");
 @import url("css/setting.css");
 
 
-/* ----------------- 공통 ----------------- */
+/* ----------------- 공통 스타일 ----------------- */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Pretendard', sans-serif;
   background-color: #f5f5f5;
   padding-top: 80px;
 }
@@ -16,30 +17,41 @@ body {
 nav {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background-color: #fff;
-  display: flex;
+  left: 50%;
   justify-content: space-between;
+  transform: translateX(-50%);  
+  width: 100%;
+  height: 100px;
+  display: flex;
   align-items: center;
-  padding: 0 50px;
+  gap: 20px;
+  padding: 0 30px;
+  background-color: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
+  z-index: 100;
+  flex-wrap: nowrap;
 }
 
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: #333;
+nav .menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  transition: 0.2s;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
 }
 
 .menu {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .menu li a {
@@ -53,7 +65,7 @@ nav {
 .menu li a:hover,
 .menu li a.active {
   color: #fff;
-  background-color: #ff6f61;
+  background-color: #8050F2;
   border-radius: 5px;
 }
 
@@ -61,6 +73,8 @@ nav {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
+  margin-left: 20px;
 }
 
 .search-container input[type="text"] {
@@ -72,7 +86,7 @@ nav {
 .search-container button {
   padding: 7px 14px;
   border: none;
-  background-color: #ff6f61;
+  background-color: #8050F2;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
@@ -80,7 +94,7 @@ nav {
 }
 
 .search-container button:hover {
-  background-color: #e65b50;
+  background-color: #8050F2;
 }
 
 /* 공통 반응형 */
