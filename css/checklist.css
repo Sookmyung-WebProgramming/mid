@@ -294,6 +294,7 @@ label.day:hover {
   padding: 4px 10px;
   border-radius: 12px;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 /* 공지 목록 */
