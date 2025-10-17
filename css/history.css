@@ -9,7 +9,7 @@
 
 /* ---------------- 왼쪽 사이드바 ---------------- */
 .sidebar {
-  width: 250px;
+  width: 230px;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,6 @@
 
 .sidebar h3 {
   margin-bottom: 10px;
-  color: #000000;
   font-size: 20px;
 }
 
@@ -36,7 +35,7 @@
 
 .chatroom-list li a {
   text-decoration: none;
-  color: #333;
+  color: #55555f;
   padding: 6px 8px;
   display: block;
   border-radius: 6px;
@@ -79,7 +78,7 @@
 .history-header h2 {
   font-size: 32px;
   font-weight: 700;
-  color: #000000;
+  /* color: #000000; */
 }
 
 .header-actions {

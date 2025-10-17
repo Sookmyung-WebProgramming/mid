@@ -4,15 +4,28 @@
   <meta charset="UTF-8">
   <title>송이톡 - 친구들과 소통하는 공간</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="css/chat_list.css">
 </head>
 <body>
+
+  <!-- 
+    채팅 목록 수정사항 (2025.10.16)
+    - chat_list.html
+    - chatList.css (새로 생성)
+    - style.css (chatList import)
+    - home.css (unread-chat-list/unread-count 색상 변경)
+    - chat.css (chatroom-list li a:hover/a.active 색상 변경)
+
+    추가 수정 (2025.10.17)
+    - 텍스트 색상 수정
+    - 웹폰트 적용
+    - 깃헙 최신 파일에 맞추기 
+  -->
 
 <!-- 네비게이션 -->
 <nav>
   <div class="logo">
     <a href="index.html"><img src="images/logo.svg" alt="송이톡 로고"></a>
-  </div>  
+  </div>
   <ul class="menu">
     <li><a href="index.html">홈</a></li>
     <li><a href="chat_list.html" class="active">채팅</a></li>
@@ -27,61 +40,107 @@
 </nav>
 
 <div class="container">
-
   <!-- 왼쪽 필터 목록 -->
   <div class="sidebar">
-    <h3>채팅 필터</h3>
+    <h3>채팅 필터<hr></h3>
     <ul class="chatroom-list">
       <li><a href="#" class="active">전체</a></li>
       <li><a href="#">안읽음</a></li>
+      <li><a href="#">즐겨찾기순</a></li>
       <li><a href="#">중요도순</a></li>
     </ul>
   </div>
 
   <!-- 오른쪽 메인 채팅 목록 -->
   <div class="main-content chat-list">
-    <h2>💬 채팅방 목록</h2>
-    <ul class="unread-chat-list">
-      <li>
-        <a href="chat_detail.html?room=홍길동">
-          <div>
-            <span class="chat-name">홍길동</span><br>
-            <span class="chat-preview">야얔ㅋㅋ</span>
-          </div>
-          <span class="unread-count">1</span>
-        </a>
-      </li>
-      <li>
-        <a href="chat_detail.html?room=김철수">
-          <div>
-            <span class="chat-name">김철수</span><br>
-            <span class="chat-preview">보고서 모두 작성했습니다.</span>
-          </div>
-          <span class="unread-count">2</span>
-        </a>
-      </li>
-      <li>
-        <a href="chat_detail.html?room=이영희">
-          <div>
-            <span class="chat-name">이영희</span><br>
-            <span class="chat-preview">ㅋㅋㅋㅋㅋㅋ</span>
-          </div>
-          <span class="unread-count">1</span>
-        </a>
-      </li>
-      <li>
-        <a href="chat_detail.html?room=박민수">
-          <div>
-            <span class="chat-name">박민수</span><br>
-            <span class="chat-preview">ㄴㅇ르민ㅇㄹ</span>
-          </div>
-          <span class="unread-count">3</span>
-        </a>
-      </li>
-    </ul>
-  </div> 
+    <h3>채팅방 목록<hr></h3>
 
-</div> 
+    <div class="subBox">
+
+      <div class="list-img">
+        <ul class="unread-chat-list">
+          <li>
+            <img class="mini-profile" src="images/person_50dp_FFFFFF.svg" alt="">
+          </li>
+          <li>
+            <img class="mini-profile" src="images/person_50dp_FFFFFF.svg" alt="">
+          </li>
+          <li>
+            <img class="mini-profile" src="images/person_50dp_FFFFFF.svg" alt="">
+          </li>
+          <li>
+            <img class="mini-profile" src="images/person_50dp_FFFFFF.svg" alt="">
+          </li>
+        </ul>
+      </div>
+
+      <div class="list-chat">
+        <ul class="unread-chat-list">
+          <li>
+            <a href="chat_detail.html?room=홍길동">
+              <div class="chat-info">
+                <span class="chat-name">홍길동</span><br>
+                <span class="chat-preview">야얔ㅋㅋ</span>
+              </div>
+              <span class="subBox">
+                <span class="unread-count">329</span>
+                <img class="icon" src="images/star_50dp_8050F2.svg" alt="">
+                <img class="icon" src="images/calendar_check_50dp_8050F2.svg" alt="">
+                <span class="time">오전 12:40</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="chat_detail.html?room=김철수">
+              <div>
+                <span class="chat-name">김철수</span><br>
+                <span class="chat-preview">보고서 모두 작성했습니다.</span>
+              </div>
+              <span class="subBox">
+               <span class="unread-count">10</span>
+                <img class="icon not" src="images/star_50dp_8050F2.svg" alt="">
+                <img class="icon" src="images/calendar_check_50dp_8050F2.svg" alt="">
+                <span class="time">오전 12:40</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="chat_detail.html?room=이영희">
+              <div>
+                <span class="chat-name">이영희</span><br>
+                <span class="chat-preview">ㅋㅋㅋㅋㅋㅋ</span>
+              </div>
+              <span class="subBox">
+                <span class="unread-count">5</span>
+                <img class="icon" src="images/star_50dp_8050F2.svg" alt="">
+                <img class="icon not" src="images/calendar_check_50dp_8050F2.svg" alt="">
+                <span class="time">오전 12:40</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="chat_detail.html?room=박민수">
+              <div>
+                <span class="chat-name">박민수</span><br>
+                <span class="chat-preview">ㄴㅇ르민ㅇㄹ</span>
+              </div>
+              <span class="subBox">
+                <!-- <span class="unread-count">3</span> -->
+                <img class="icon not" src="images/star_50dp_8050F2.svg" alt="">
+                <img class="icon not" src="images/calendar_check_50dp_8050F2.svg" alt="">
+                <span class="time">오전 12:40</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div> <!--end subBox-->
+
+  </div> <!--end main-content chat-list-->
+
+</div> <!--end container-->
 
 </body>
+
 </html>
