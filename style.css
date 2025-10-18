@@ -42,9 +42,9 @@ nav .menu a {
 }
 
 .logo img {
-  width: 60%;
+  width: 40%;
   min-width: 100px;
-  margin-left: 30px;
+  margin-left: 100px;
 }
 
 .menu {
@@ -62,14 +62,14 @@ nav .menu a {
   color: #55555f;
   font-weight: 300;
   padding: 12px 15px;
-  transition: all 0.3s ease;
+  transition: all 0.01s ease;
 }
 
 .menu li a:hover,
 .menu li a.active {
   color: #fff;
   background-color: #8050F2;
-  border-radius: 5px;
+  border-radius: 16px;
 }
 
 .search-container {

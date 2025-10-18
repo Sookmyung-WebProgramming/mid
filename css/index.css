@@ -7,7 +7,6 @@
 .hero h1 {
   font-size: 36px;
   color: #333;
-  margin-bottom: 20px;
 }
 
 .hero p {
@@ -17,77 +16,284 @@
 
 .container {
   display: flex;
-  gap: 30px;
-  padding: 40px 20px;
+  gap: 16px;
+  margin-top:0px;
+  padding: 16px 16px;
   justify-content: center;
 }
 
-.sidebar {
-  width: 280px;
+.box1 {
+  display: flex;
+  flex-direction: column;
+  flex:0.4;
+  max-width: 360px;
+  
+}
+
+.aboutme {
   background-color: #fff;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  gap:0px;
+  margin-bottom: 16px;
+
 }
 
-.friend-list {
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding:20px;
+}
+
+.profile-img-wrap{
+  position: relative;
+  width: 120px;
+  height: 120px;
+  
+  overflow: visible;
+
+}
+
+.profile-img-wrap img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+
+}
+
+.profile-btn {
+  position:absolute;
+  right:10px;
+  bottom: 10px;
+  width:20px;
+  height:20px;
+  background-color: #333;
+  font-size:16px;
+  color:#fff;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding:0;
+  z-index: 1;
+  border:none;
+
+}
+
+.profile-text {
+  padding:10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-name{
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+
+}
+
+.profile-status{
+  font-size: 13px;
+}
+
+
+.sidebar {
+  width:320px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  gap:0px;
+  
+  
+
+}
+
+
+.sidebar h3 {
+  margin-left: 9px;
+  margin-top:9px;
+
+}
+
+
+.todo-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top:18px;
+  margin-left: 9px;
+  
 }
 
-.friend-list li {
+.todo-list li {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  width: 100%;
+  margin-bottom: 24px;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.friend-list li:hover {
+.todo-list li:hover {
   background-color: #f9f9f9;
   border-radius: 8px;
   padding-left: 5px;
 }
 
-.friend-img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  margin-right: 12px;
+input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius:4px;
+  background-color: #ECEFF1;
+  margin-right: 20px;
+
 }
 
-.friend-info {
+input[type="checkbox"]:checked {
+  background-color: #8050F2;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik05LjI5IDE2LjU5bC03LjI4LTcuMjcgMS40MS0xLjQxIDUuODcgNS44NyAxMy4yMS0xMy4yMSAxLjQxIDEuNDF6Ii8+PC9zdmc+');
+
+}
+
+.check-delete {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 16px;
 }
 
-.friend-name {
-  font-weight: bold;
+.circle {
+  width: 3.5px;
+  height: 3.5px;
+  background-color: #8050F2;
+  border-radius: 50%;
+  margin-left: 2px;
+  
+  
+}
+
+
+.todolist-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.todo-name {
   color: #333;
 }
 
-.friend-status {
-  font-size: 13px;
+.todo-status {
+  padding-right: 20px;
+  font-size: 16px;
   color: #888;
 }
 
 .main-content {
-  flex: 1;
+  flex: 0.6;
   background-color: #fff;
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+
+.main-content .title {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #fff;
+  padding:12px 16px;
+  background-color:#333 ;
+  border-radius: 48px;
+  display: inline-block;
+  width: fit-content;
+  align-items: center;
+
+}
+
+.title-num {
+  background-color: #F4551E;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 5px 5px;
+  font-size: 12px;
+  margin-left: 8px;
 }
 
 .main-content h2 {
   color: #333;
 }
 
+.chat-img {
+  width: 40px;
+  height: 40px;
+  background-color: #E8e4ff;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.chat-img1{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right:10px;
+}
+
+.square {
+  width: 18px;
+  height: 18px;
+  background-color: #E8e4ff;
+  border-radius: 6px;
+  margin: 1px;
+}
+
+.chat-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-preview {
+  color: #888;
+  font-size: 14px;
+  margin-top:4px;
+}
+
+.chat-name {
+  margin-left: 0px;
+}
+
+.chat-time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: auto;
+  margin-right:10px;
+}
+
+.time {
+  color: #888;
+  font-size: 12px;}
+
 .unread-chat-list {
   list-style: none;
   padding: 0;
-  margin: 20px 0;
+  margin: 0 0;
 }
 
 .unread-chat-list li {
@@ -96,7 +302,7 @@
 
 .unread-chat-list a {
   display: flex;
-  justify-content: space-between;
+  gap:12px;
   align-items: center;
   background-color: #f9f9f9;
   padding: 12px 15px;
@@ -115,21 +321,12 @@
   color: #fff;
   font-weight: bold;
   border-radius: 50%;
-  padding: 5px 10px;
-  font-size: 12px;
+  padding: 3px 6px;
+  font-size: 10px;
+  margin-top:6px;
 }
 
-.schedule {
-  list-style: none;
-  padding: 0;
-  margin-top: 15px;
-  color: #555;
-  font-size: 15px;
-}
 
-.schedule li {
-  margin-bottom: 8px;
-}
 
 /* 홈 반응형 */
 @media (max-width: 900px) {
