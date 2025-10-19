@@ -6,7 +6,7 @@
 }
 
 .chat-list-sidebar {
-  width: 260px;
+  width: 200px;
   height: fit-content;
   display: flex;
   flex-direction: column;
