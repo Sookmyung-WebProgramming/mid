@@ -73,7 +73,7 @@ nav .menu a:hover {
 
 .sidebar {
   flex: 0 0 20%;
-  max-width: 280px;
+  max-width: 200px;
   background-color: #ffffff;
   border-radius: 15px;
   padding: 25px 20px;
