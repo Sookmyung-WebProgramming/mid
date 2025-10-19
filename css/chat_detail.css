@@ -318,6 +318,25 @@ widget-item input[type="checkbox"] {
   display: none;
 }
 
+/* bubble-row 안 체크박스 숨기기 */
+.bubble-row input[type="checkbox"] {
+  display: none; 
+}
+
+/* 기본 하트 스타일 */
+.bubble-row .heart {
+  cursor: pointer;
+  font-size: 22px;
+  transition: transform 0.2s ease, filter 0.2s ease, color 0.2s ease;
+}
+
+/* 체크 상태일 때 하트 강조 */
+.bubble-row input[type="checkbox"]:checked + .heart {
+  color: #8050F2;
+  filter: drop-shadow(0 0 4px rgba(255, 75, 75, 0.6));
+  transform: scale(1.2);
+}
+
 .chat-input {
   display: flex;
   align-items: center;
