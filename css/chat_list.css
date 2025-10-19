@@ -53,6 +53,10 @@
   border-radius: 50%;
 }
 
+.chat-info {
+  flex-grow: 1;
+}
+
 .subBox {
   display: flex;
   padding: 10px;
