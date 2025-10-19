@@ -105,12 +105,14 @@
 
 
 .sidebar {
-  width:320px;
+  width:100%;
+  max-width: 100%;
   background-color: #fff;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   gap:0px;
+  box-sizing: border-box;
   
   
 
