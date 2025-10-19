@@ -205,7 +205,7 @@ input[type="checkbox"]:checked {
 }
 
 .main-content {
-  flex: 0.6;
+  flex: 0.8;
   background-color: #fff;
   border-radius: 12px;
   padding: 30px;
