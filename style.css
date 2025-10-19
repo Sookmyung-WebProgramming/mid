@@ -93,6 +93,11 @@ nav {
   background-color: #8050f2;
 }
 
+/* 링크 밑줄 제거 */
+a {
+  text-decoration: none;
+}
+
 /* 공통 반응형 */
 @media (max-width: 900px) {
   .container {
