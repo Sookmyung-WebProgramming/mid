@@ -279,6 +279,10 @@ nav .menu a:hover {
   gap: 8px;
 }
 
+.bubble-row input[type="checkbox"] {
+  display: none;
+}
+
 .bubble-row .meta {
   display: contents;
   align-items: center;
