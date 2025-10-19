@@ -59,7 +59,7 @@
 
 .filter-item input[type="checkbox"] {
   margin-right: 10px;
-  accent-color: #6f42c1;
+  accent-color: #8050f2;
   cursor: pointer;
 }
 
@@ -97,9 +97,9 @@
 
 .day-name {
   font-weight: bold;
-  color: #6f42c1;
+  color: #8050f2;
   padding-bottom: 8px;
-  border-bottom: 2px solid #6f42c1;
+  border-bottom: 2px solid #8050f2;
 }
 
 .day {
@@ -124,7 +124,7 @@ label.day {
 .day:hover,
 label.day:hover {
   background-color: #e2d9f3;
-  color: #6f42c1;
+  color: #8050f2;
   font-weight: bold;
 }
 
@@ -139,12 +139,12 @@ label.day:hover {
 
 /* 오늘 날짜가 일정이 있을 때 점 표시 */
 .today.has-tasks::after {
-  background-color: #6f42c1;
+  background-color: #8050f2;
 }
 
 /* 선택된 오늘 날짜 */
 #date-12:checked ~ .page-container .calendar label.today[for="date-12"] {
-  background-color: #6f42c1;
+  background-color: #8050f2;
   color: #fff;
   border: 2px solid #59359a !important;
 }
@@ -178,7 +178,7 @@ label.day:hover {
 #date-15:checked ~ .page-container .calendar label[for="date-15"],
 #date-20:checked ~ .page-container .calendar label[for="date-20"],
 #date-25:checked ~ .page-container .calendar label[for="date-25"] {
-  background-color: #6f42c1;
+  background-color: #8050f2;
   color: #fff;
   font-weight: bold;
 }
@@ -271,7 +271,7 @@ label.day:hover {
 
 .task-item input[type="checkbox"] {
   margin: 0;
-  accent-color: #6f42c1;
+  accent-color: #8050f2;
   cursor: pointer;
 }
 
@@ -290,7 +290,7 @@ label.day:hover {
 .chat-badge {
   font-size: 12px;
   color: #fff;
-  background-color: #6f42c1;
+  background-color: #8050f2;
   padding: 4px 10px;
   border-radius: 12px;
   white-space: nowrap;
@@ -310,7 +310,7 @@ label.day:hover {
   border-radius: 8px;
   margin-bottom: 12px;
   transition: all 0.3s ease;
-  border-left: 4px solid #6f42c1;
+  border-left: 4px solid #8050f2;
 }
 
 .notice-item:hover {
