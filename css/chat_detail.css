@@ -51,7 +51,7 @@ nav .menu a {
   font-size: 16px;
 }
 nav .menu a:hover {
-  color: #6f42c1;
+  color: #8050F2;
 }
 
 /* 검색창 */
@@ -100,7 +100,7 @@ nav .menu a:hover {
   text-align: center;
   padding: 12px 0;
   font-weight: 600;
-  color: #6f42c1;
+  color: #8050F2;
   transition: all 0.25s ease;
   cursor: pointer;
 }
@@ -123,7 +123,7 @@ nav .menu a:hover {
   margin-top: 10px;
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #6f42c1;
+  border: 1px solid #8050F2;
   resize: none;
   outline: none;
 }
@@ -319,7 +319,7 @@ nav .menu a:hover {
 }
 
 input[type="checkbox"]:checked + .heart {
-  color: #6f42c1;
+  color: #8050F2;
   filter: drop-shadow(0 0 4px rgba(255, 75, 75, 0.6));
   transform: scale(1.2);
 }
@@ -380,7 +380,7 @@ input[type="checkbox"]:checked + .heart {
   transition: all 0.3s ease;
 }
 .send-btn:hover {
-  background-color: #6f42c1;
+  background-color: #8050F2;
 }
 
 /* ===== 반응형 ===== */
