@@ -1,17 +1,14 @@
-@import url("css/index.css");
-@import url("css/chat_list.css");
-@import url("css/chat_detail.css");
+@import url("css/home.css");
+@import url("css/chat.css");
 @import url("css/checklist.css");
 @import url("css/history.css");
-@import url("css/setting.css");
-
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+@import url("css/profile.css");
 
 
 /* ----------------- 공통 ----------------- */
 body {
   margin: 0;
-  font-family: 'Pretendard', sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #f5f5f5;
   padding-top: 80px;
 }
@@ -19,57 +16,45 @@ body {
 nav {
   position: fixed;
   top: 0;
-  left: 50%;
-  justify-content: space-between;
-  transform: translateX(-50%);  
+  left: 0;
   width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 0 30px;
+  height: 80px;
   background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 100;
-  flex-wrap: nowrap;
+  z-index: 1000;
 }
 
-nav .menu a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  transition: 0.2s;
-}
-
-.logo img {
-  width: 40%;
-  min-width: 100px;
-  margin-left: 100px;
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
 }
 
 .menu {
   display: flex;
-  gap: 20px;
+  gap: 70px;
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-shrink: 1;
-  min-width: 0;
 }
 
 .menu li a {
   text-decoration: none;
-  color: #55555f;
-  font-weight: 300;
+  color: #333;
+  font-weight: 500;
   padding: 12px 15px;
-  transition: all 0.01s ease;
+  transition: all 0.3s ease;
 }
 
 .menu li a:hover,
 .menu li a.active {
   color: #fff;
-  background-color: #8050F2;
-  border-radius: 16px;
+  background-color: #6f42c1;
+  border-radius: 5px;
 }
 
 .search-container {
@@ -94,11 +79,10 @@ nav .menu a {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-right: 30px;
 }
 
 .search-container button:hover {
-  background-color: #8050F2;
+  background-color: #6f42c1;
 }
 
 /* 공통 반응형 */
