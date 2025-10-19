@@ -1,12 +1,4 @@
-
-.container h3 {
-  margin-bottom: 10px;
-  color: #8050F2;
-  font-size: 20px;
-}
-
 .container {
-  display: flex;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
