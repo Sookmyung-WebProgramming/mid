@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-/* ===== 네비게이션 (상단 바) ===== */
+/* ===== 네비게이션 ===== */
 nav {
   display: flex;
   align-items: center;
@@ -16,12 +16,11 @@ nav {
   padding: 14px 40px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
-  overflow: visible; /* 버튼 짤림 방지 */
-  flex-wrap: nowrap; /* 줄바꿈 방지 */
+  overflow: visible; 
+  flex-wrap: nowrap; 
   box-sizing: border-box;
 }
 
-/* 로고 */
 nav .logo {
   display: flex;
   align-items: center;
@@ -34,7 +33,7 @@ nav .logo img {
   flex-shrink: 0;
 }
 
-/* 메뉴 */
+
 nav .menu {
   display: flex;
   list-style: none;
@@ -72,7 +71,6 @@ nav .menu a:hover {
   white-space: nowrap;
 }
 
-/* ===== 사이드바 ===== */
 .sidebar {
   flex: 0 0 20%;
   max-width: 280px;
@@ -85,7 +83,6 @@ nav .menu a:hover {
   align-items: center;
 }
 
-/* ===== 위젯 ===== */
 .widget-box {
   display: flex;
   flex-direction: column;
@@ -111,7 +108,6 @@ nav .menu a:hover {
   color:#fff
 }
 
-/* ===== 메모 위젯 펼치기 ===== */
 .memo-box {
   max-height: 0;
   overflow: hidden;
@@ -134,7 +130,6 @@ nav .menu a:hover {
   max-height: 200px;
 }
 
-/* ===== 채팅창 ===== */
 .chat-window {
   flex: 1;
   max-width: 900px;
@@ -153,7 +148,7 @@ nav .menu a:hover {
   padding-bottom: 8px;
   display: flex;
   align-items: center;
-  gap: 10px; /* 아이콘과 텍스트 사이 간격 */
+  gap: 10px; 
   padding: 10px 14px;
 }
 
@@ -162,8 +157,8 @@ nav .menu a:hover {
   display: inline-block;
   width: 48px;
   height: 48px;
-  background-color: #EDE8FF; /* 보라색 배경 */
-  border-radius: 15px; /* 사진처럼 둥근 사각형 */
+  background-color: #EDE8FF; 
+  border-radius: 15px; 
 }
 
 .chat-header h2 {
@@ -194,7 +189,7 @@ nav .menu a:hover {
   overflow-y: auto;
 }
 
-/* ===== 메시지 영역 ===== */
+
 .message {
   display: flex;
   align-items: flex-start;
@@ -214,7 +209,7 @@ nav .menu a:hover {
   margin-right: 10px;
 }
 
-/* 이름 */
+
 .chat-name {
   font-weight: 700;
   font-size: 16px;
@@ -234,10 +229,10 @@ nav .menu a:hover {
   white-space: pre-line;
   word-break: keep-all;
 }
-/* --'나' 말풍선-- */
+
 .message.me {
   display: flex;
-  flex-direction: row-reverse; /* 프로필을 오른쪽으로 */
+  flex-direction: row-reverse; 
   align-items: flex-start;
   gap: 10px;
 }
@@ -253,7 +248,7 @@ nav .menu a:hover {
   font-weight: 700;
   font-size: 16px;
   color: #111;
-  margin-left: 10px; /* 프로필 위 정렬 */
+  margin-left: 10px; 
   margin-bottom: 4px;
 }
 
@@ -319,7 +314,6 @@ input[type="checkbox"] {
   display: none;
 }
 
-/* ===== 채팅 입력창 ===== */
 .chat-input {
   display: flex;
   align-items: center;
@@ -342,7 +336,6 @@ input[type="checkbox"] {
   font-size: 15px;
 }
 
-/* 파일첨부 버튼 */
 .attach-btn {
   display: inline-flex;
   align-items: center;
@@ -363,7 +356,6 @@ input[type="checkbox"] {
   transform: scale(1.1);
 }
 
-/* 전송 버튼 */
 .send-btn {
   background-color: #EDE8FF;
   color: #ffffff;
@@ -378,7 +370,6 @@ input[type="checkbox"] {
   background-color: #8050F2;
 }
 
-/* ===== 반응형 ===== */
 @media (max-width: 900px) {
   .chat-window {
     width: 100%;
