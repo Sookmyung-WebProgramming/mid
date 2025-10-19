@@ -329,6 +329,11 @@ input[type="checkbox"]:checked {
   margin-top:6px;
 }
 
+.sidebar > h3 {
+  display: block;
+  padding-bottom: 16px;    
+}
+
 
 
 /* 홈 반응형 */
