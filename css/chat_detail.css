@@ -1,91 +1,391 @@
+/* ===== 전체 레이아웃 ===== */
 .container {
   display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 60px;
+  box-sizing: border-box;
 }
 
-.chat-window {
+/* ===== 네비게이션 (상단 바) ===== */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  overflow: visible; /* 버튼 짤림 방지 */
+  flex-wrap: nowrap; /* 줄바꿈 방지 */
+  box-sizing: border-box;
+}
+
+/* 로고 */
+nav .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .logo img {
+  height: 50px;
+  border-radius: 6px;
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+/* 메뉴 */
+nav .menu {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+nav .menu a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  font-size: 16px;
+}
+nav .menu a:hover {
+  color: #6f42c1;
+}
+
+/* 검색창 */
+.search-container {
+  overflow: visible;
+  white-space: nowrap;
+}
+
+.search-container input {
+  width: 200px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.search-container button {
+  font-weight: 600;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* ===== 사이드바 ===== */
+.sidebar {
+  flex: 0 0 20%;
+  max-width: 280px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  height: 600px;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  align-items: center;
+}
+
+/* ===== 위젯 ===== */
+.widget-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.widget-item {
+  background-color: #EDE8FF;
+  border: 2px solid #EDE8FF;
+  border-radius: 10px;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: 600;
+  color: #6f42c1;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.widget-item:hover {
+  background-color: #ffffff;
+  transform: scale(1.03);
+}
+
+/* ===== 메모 위젯 펼치기 ===== */
+.memo-box {
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.memo-box textarea {
+  width: 100%;
+  height: 80px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #6f42c1;
+  resize: none;
+  outline: none;
+}
+
+#memo-toggle:checked + label + .memo-box {
+  max-height: 200px;
+}
+
+/* ===== 채팅창 ===== */
+.chat-window {
+  flex: 1;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  font-weight: 700;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 아이콘과 텍스트 사이 간격 */
+  padding: 10px 14px;
+}
+
+.chat-header::before {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: #EDE8FF; /* 보라색 배경 */
+  border-radius: 15px; /* 사진처럼 둥근 사각형 */
+}
+
+.chat-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.chat-header .member-count {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: #67727C;
+}
+
+.chat-header .member-count::before {
+  content: "👤";
+  font-size: 14px;
 }
 
 .chat-messages {
   flex: 1;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 0;
   overflow-y: auto;
-  background-color: #fdfdfd;
 }
 
-.chat-messages p, .bubble {
-  margin: 10px 0;
-  line-height: 1.5;
+/* ===== 메시지 영역 ===== */
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  gap: 10px;
 }
 
-.chat-messages .me .bubble {
-  text-align: right;
-  background-color: #8050F2;
-  color: #fff;
-  display: inline-block;
-  padding: 8px 12px;
+.message.friend {
+  flex-direction: row;
+}
+
+.chat-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* 이름 */
+.chat-name {
+  font-weight: 700;
+  font-size: 16px;
+  color: #111;
+  margin: 0 0 6px 2px;
+}
+
+/* 말풍선 */
+.bubble {
+  background: #F4F2F1;
+  color: #111;
   border-radius: 12px;
-  margin: 6px 0;
-  max-width: 70%;
-}
-
-.chat-messages .friend .bubble {
-  text-align: left;
-  background-color: #f1f1f1;
+  padding: 10px 14px;
   display: inline-block;
-  padding: 8px 12px;
-  border-radius: 12px;
-  margin: 6px 0;
-  max-width: 70%;
+  max-width: 38ch;
+  line-height: 1.35;
+  white-space: pre-line;
+  word-break: keep-all;
+}
+/* --'나' 말풍선-- */
+.message.me {
+  display: flex;
+  flex-direction: row-reverse; /* 프로필을 오른쪽으로 */
+  align-items: flex-start;
+  gap: 10px;
 }
 
+/* 이름 + 말풍선 묶음 */
+.message.me .chat-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* 이름 (프로필 바로 위) */
+.message.me .chat-name {
+  font-weight: 700;
+  font-size: 16px;
+  color: #111;
+  margin-left: 10px; /* 프로필 위 정렬 */
+  margin-bottom: 4px;
+}
+
+/* 말풍선 + 메타 (↩ 12:31 ❤️ 순서) */
+.message.me .bubble-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse; /* 버블 오른쪽, 메타 왼쪽 */
+  gap: 10px;
+}
+
+/* ↩ 12:31 ❤️ 순서 */
+.message.me .bubble-row .meta {
+  display: flex;
+  flex-direction: row-reverse; 
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: #000;
+}
+
+/* 말풍선 */
+.message.me .bubble {
+  background: #EDE8FF;
+  color: #111;
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: inline-block;
+  max-width: 38ch;
+  line-height: 1.35;
+  white-space: pre-line;
+  word-break: keep-all;
+}
+
+/* 프로필 */
+.message.me .chat-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== 말풍선/시간/하트 정렬 ===== */
+.bubble-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bubble-row .meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: #000;
+}
+
+
+/* ===== 하트 공감 ===== */
+.heart {
+  cursor: pointer;
+  font-size: 22px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+input[type="checkbox"]:checked + .heart {
+  color: #6f42c1;
+  filter: drop-shadow(0 0 4px rgba(255, 75, 75, 0.6));
+  transform: scale(1.2);
+}
+
+/* ===== 채팅 입력창 ===== */
 .chat-input {
   display: flex;
-  padding: 15px;
-  border-top: 1px solid #eee;
-  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #ffffff;
+  border: 2px solid #EAE5E2;
+  border-radius: 30px;
+  padding: 10px 15px;
+  margin-top: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
 }
 
-.chat-input input {
+.chat-input input[type="text"] {
   flex: 1;
   padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  border: none;
+  background-color: transparent;
   outline: none;
   font-size: 15px;
 }
 
-.chat-input input:focus {
-  border-color: #8050F2;
-}
-
-.chat-input button {
-  margin-left: 10px;
-  padding: 10px 18px;
-  background-color: #8050F2;
-  border: none;
-  color: #fff;
-  border-radius: 8px;
-  cursor: pointer;
+/* 파일첨부 버튼 */
+.attach-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #EDE8FF;
+  border: 2px solid #EDE8FF;
+  color: #111;
+  font-size: 20px;
   font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+.attach-btn:hover {
+  transform: scale(1.1);
 }
 
-.chat-input button:hover {
-  background-color: #6739c2;
+/* 전송 버튼 */
+.send-btn {
+  background-color: #EDE8FF;
+  color: #AAAAAA;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.send-btn:hover {
+  background-color: #6f42c1;
 }
 
+/* ===== 반응형 ===== */
 @media (max-width: 900px) {
   .chat-window {
-    height: 500px;
+    width: 100%;
   }
 }
