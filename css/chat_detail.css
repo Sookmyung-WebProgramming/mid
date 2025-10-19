@@ -287,6 +287,10 @@ nav .menu a:hover {
   color: #000;
 }
 
+.time {
+  margin-left: 1px;
+}
+
 
 .message.friend .bubble { order: 1; }
 .message.friend .time   { order: 2; }
