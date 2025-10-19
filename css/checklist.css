@@ -59,7 +59,7 @@
 
 .filter-item input[type="checkbox"] {
   margin-right: 10px;
-  accent-color: #8050f2;
+  accent-color: #6f42c1;
   cursor: pointer;
 }
 
@@ -97,9 +97,9 @@
 
 .day-name {
   font-weight: bold;
-  color: #8050f2;
+  color: #6f42c1;
   padding-bottom: 8px;
-  border-bottom: 2px solid #8050f2;
+  border-bottom: 2px solid #6f42c1;
 }
 
 .day {
