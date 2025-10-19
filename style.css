@@ -35,6 +35,12 @@ nav {
   color: #333;
 }
 
+.logo img {
+  width: 40%;
+  min-width: 100px;
+  margin-left: 100px;
+}
+
 .menu {
   display: flex;
   gap: 70px;
@@ -42,6 +48,7 @@ nav {
   margin: 0;
   padding: 0;
 }
+
 
 .menu li a {
   text-decoration: none;
