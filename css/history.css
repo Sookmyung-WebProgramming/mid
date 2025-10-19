@@ -21,7 +21,7 @@
   font-size: 20px;
 }
 
-/* 채팅방 리스트 스크롤 최적화 */
+/* 채팅방 리스트 스크롤 */
 .chatroom-list {
   list-style: none;
   padding: 0;
@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-  max-height: 200px; /* 높이 제한 */
+  max-height: 200px; 
   overflow-y: auto;   /* 스크롤 가능 */
 }
 
@@ -78,7 +78,6 @@
 .history-header h2 {
   font-size: 32px;
   font-weight: 700;
-  /* color: #000000; */
 }
 
 .header-actions {
