@@ -94,20 +94,21 @@ nav .menu a:hover {
 }
 
 .widget-item {
-  background-color: #EDE8FF;
-  border: 2px solid #EDE8FF;
+  background-color: #fafafa;
+  border: 2px solid #fafafa;
   border-radius: 10px;
   text-align: center;
   padding: 12px 0;
   font-weight: 600;
-  color: #8050F2;
+  color: #80828f;
   transition: all 0.25s ease;
   cursor: pointer;
 }
 
 .widget-item:hover {
-  background-color: #ffffff;
+  background-color: #8050F2;
   transform: scale(1.03);
+  color:#fff
 }
 
 /* ===== 메모 위젯 펼치기 ===== */
@@ -126,6 +127,7 @@ nav .menu a:hover {
   border: 1px solid #8050F2;
   resize: none;
   outline: none;
+  box-sizing: border-box; 
 }
 
 #memo-toggle:checked + label + .memo-box {
@@ -240,14 +242,13 @@ nav .menu a:hover {
   gap: 10px;
 }
 
-/* 이름 + 말풍선 묶음 */
 .message.me .chat-content {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-/* 이름 (프로필 바로 위) */
+
 .message.me .chat-name {
   font-weight: 700;
   font-size: 16px;
@@ -256,25 +257,7 @@ nav .menu a:hover {
   margin-bottom: 4px;
 }
 
-/* 말풍선 + 메타 (↩ 12:31 ❤️ 순서) */
-.message.me .bubble-row {
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse; /* 버블 오른쪽, 메타 왼쪽 */
-  gap: 10px;
-}
 
-/* ↩ 12:31 ❤️ 순서 */
-.message.me .bubble-row .meta {
-  display: flex;
-  flex-direction: row-reverse; 
-  align-items: center;
-  gap: 6px;
-  font-size: 15px;
-  color: #000;
-}
-
-/* 말풍선 */
 .message.me .bubble {
   background: #EDE8FF;
   color: #111;
@@ -287,7 +270,7 @@ nav .menu a:hover {
   word-break: keep-all;
 }
 
-/* 프로필 */
+
 .message.me .chat-img {
   width: 48px;
   height: 48px;
@@ -295,23 +278,32 @@ nav .menu a:hover {
   object-fit: cover;
 }
 
-/* ===== 말풍선/시간/하트 정렬 ===== */
 .bubble-row {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  align-items: baseline;
+  gap: 8px;
 }
 
 .bubble-row .meta {
-  display: flex;
+  display: contents;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-size: 15px;
   color: #000;
 }
 
 
-/* ===== 하트 공감 ===== */
+.message.friend .bubble { order: 1; }
+.message.friend .time   { order: 2; }
+.message.friend .reply  { order: 3; }
+.message.friend .heart  { order: 4; }
+
+.message.me .heart  { order: 1; }
+.message.me .reply  { order: 2; }
+.message.me .time   { order: 3; }
+.message.me .bubble { order: 4; }
+
+
 .heart {
   cursor: pointer;
   font-size: 22px;
@@ -322,6 +314,9 @@ input[type="checkbox"]:checked + .heart {
   color: #8050F2;
   filter: drop-shadow(0 0 4px rgba(255, 75, 75, 0.6));
   transform: scale(1.2);
+}
+input[type="checkbox"] {
+  display: none;
 }
 
 /* ===== 채팅 입력창 ===== */
@@ -371,7 +366,7 @@ input[type="checkbox"]:checked + .heart {
 /* 전송 버튼 */
 .send-btn {
   background-color: #EDE8FF;
-  color: #AAAAAA;
+  color: #ffffff;
   border: none;
   padding: 10px 18px;
   border-radius: 25px;
