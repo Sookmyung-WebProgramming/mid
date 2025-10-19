@@ -2,23 +2,25 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>송이톡 - 친구와 채팅</title>
+  <title>송이톡 - 친구들과 소통하는 공간</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="css/chat_detail.css">
+  <link rel="stylesheet" href="chat.css">
 </head>
 <body>
 
 <!-- 네비게이션 -->
 <nav>
   <div class="logo">
-    <a href="index.html"><img src="images/logo.svg" alt="송이톡 로고"></a>
+    <img src="image 102.png" alt="송이톡">
   </div>
+
+
   <ul class="menu">
-    <li><a href="index.html" class="nav-link">홈</a></li>
-    <li><a href="chat_list.html" class="nav-link">채팅</a></li>
-    <li><a href="checklist.html" class="nav-link">체크리스트</a></li>
-    <li><a href="history.html" class="nav-link">보관함</a></li>
-    <li><a href="setting.html" class="nav-link">설정</a></li>
+    <li><a href="index.html">홈</a></li>
+    <li><a href="chat_list.html">채팅</a></li>
+    <li><a href="checklist.html">체크리스트</a></li>
+    <li><a href="history.html">보관함</a></li>
+    <li><a href="profile.html">설정</a></li>
   </ul>
   <div class="search-container">
     <input type="text" placeholder="검색 (친구, 채팅, 보관함 등)">
@@ -26,45 +28,98 @@
   </div>
 </nav>
 
+<!-- 메인 컨테이너 -->
 <div class="container">
 
-  <!-- 왼쪽 사이드 -->
+  <!-- 왼쪽 사이드바 -->
   <div class="sidebar">
-    <h3>채팅방 정보</h3>
-    <ul>
-      <li>📅 일정 보기</li>
-      <li>📸 추억 보기</li>
-    </ul>
+    <h3></h3>
+
+    <div class="widget-box">
+      <a href="checklist.html" class="widget-item">📅 일정</a>
+      <a href="history.html" class="widget-item">📸 추억</a>
+
+      <!-- ✅ 메모 토글 -->
+      <input type="checkbox" id="memo-toggle" hidden>
+      <label for="memo-toggle" class="widget-item">📝 메모</label>
+      <div class="memo-box">
+        <textarea placeholder="메모를 작성하세요..."></textarea>
+      </div>
+    </div>
   </div>
 
-  <!-- 오른쪽 메인 영역 -->
-  <div class="main-content chat-window">
+  <!-- 오른쪽 채팅 영역 -->
+  <div class="chat-window">
     <div class="chat-header">
-      <h2>💬 홍길동과의 대화</h2>
+      <h2>홍길동</h2>
+      <div class="member-count">2</div>
     </div>
 
     <div class="chat-messages">
       <div class="message friend">
-        <img src="https://picsum.photos/50?random=1" alt="홍길동" class="chat-img">
-        <div class="bubble">안녕하세요!</div>
+        <img src="카톡 기본프로필 사진.jpg" alt="홍길동" class="chat-img">
+        
+        <div class="chat-content">
+          <div class="chat-name">홍길동</div>
+
+          <div class="bubble-row">
+            <div class="bubble">안녕하세요!</div>
+            <div class="meta">
+              <span class="time">12:30</span>
+              <span class="reply">↩</span>
+              <input type="checkbox" id="heart1" hidden>
+              <label for="heart1" class="heart">❤️</label>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
 
       <div class="message me">
-        <div class="bubble">안녕하세요~ 반가워요 😊</div>
+        <img src="profile.jpg" alt="홍길동" class="chat-img">
+
+        <div class="chat-content">
+          <div class="chat-name">나</div>
+
+          <div class="bubble-row">
+            <div class="bubble">안녕하세요~ 반가워요 😊</div>
+            <div class="meta">
+              <span class="time">12:31</span>
+              <span class="reply">↩</span>
+              <input type="checkbox" id="heart2" hidden>
+              <label for="heart2" class="heart">❤️</label>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="message friend">
-        <img src="https://picsum.photos/50?random=2" alt="홍길동" class="chat-img">
-        <div class="bubble">오늘 일정 공유드릴게요!</div>
+        <img src="카톡 기본프로필 사진.jpg" alt="홍길동" class="chat-img">
+
+        <div class="chat-content">
+          <div class="chat-name">홍길동</div>
+
+          <div class="bubble-row">
+            <div class="bubble">오늘 일정 공유드릴게요!</div>
+            <div class="meta">
+              <span class="time">12:35</span>
+              <span class="reply">↩</span>
+              <input type="checkbox" id="heart3" hidden>
+              <label for="heart3" class="heart">❤️</label>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+
 
     <div class="chat-input">
-      <input type="text" placeholder="메시지 입력...">
-      <button>전송</button>
+      <label for="file-upload" class="attach-btn">＋</label>
+      <input type="file" id="file-upload" hidden>
+      <input type="text" placeholder="메시지를 입력하세요...">
+      <button class="send-btn">전송</button>
     </div>
   </div>
-  
+
 </div>
 
 </body>
